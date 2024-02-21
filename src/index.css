@@ -1,3 +1,7 @@
+:root {
+  --primary-color:#495E57;
+  --secondary-color: #F4CE14;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -20,10 +24,9 @@ header{
   grid-template-columns: 2fr auto;
 }
 header img{
-  margin: auto;
+  margin-left: 290px;
   height: 65px;
   width: 216px;
-  /* padding-left:210px; */
 }
 
 nav {
@@ -34,9 +37,10 @@ nav {
   grid-template-columns: 1fr;
   background-color: white;
   font-family: 'Karla', sans-serif;
-  font-size: 20px;
-  color: #333333; 
-  padding: 10px; 
+  font-size: 18px;
+  font-weight: 400;
+  color: #333333;
+  padding: 10px;
   justify-content: flex-end;
 }
 ul {
@@ -56,8 +60,57 @@ a {
 main {
   height:1900px;
   width: auto;
+}
+.homepage{
+  height: 450px;
+  width: auto;
+  padding-inline: 290px;
+  background-color: var(--primary-color);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+}
+.homepage-img{
+  height: 475px;
+  width: 375px;
+  border-radius: 25px;
+}
+.homepage-img-container{
+  margin-top: 35px;
+  padding: auto;
+}
+
+.yellow-header{
+  color: var(--secondary-color);
+  font-family: "Markazi Text", serif;
+  font-size: 64px;
+  font-weight: 600;
+}
+
+.white-subheader{
+  color: white;
+  font-family: "Markazi Text", serif;
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.white-parag{
+  color:white;
+  font-family: 'Karla', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+button{
+  height: 60px;
+  width: 200px;
+  border: 0;
+  border-radius: 16px;
+  color:#333333;
+  background-color: var(--secondary-color);
+  font-family: 'Karla', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+
 }
 footer{
   height: 450px;
@@ -66,7 +119,7 @@ footer{
 }
 
 footer div.footer{
-  padding: 200px 210px 0;
+  padding: 200px 290px 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
