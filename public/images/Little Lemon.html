@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:3000/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link rel="icon" href="http://localhost:3000/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Order the best food and get unforgettable gastronomic experience at our simple but at the same time unique restaurant Little Lemon.">
+    <meta name="og:title" content="Little Lemon | A Citrus-infused Culinary Experience">
+    <meta name="og:description" content="Discover the essence of culinary excellence at Little Lemon. Immerse yourself in a world of vibrant flavors and artfully crafted dishes that redefine dining. From refreshing appetizers to exquisite main courses, every bite is a celebration of taste. Join us for a gastronomic journey where passion meets perfection, and each moment is a delightful symphony of culinary creativity.">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./Little Lemon_files/css2" rel="stylesheet">
+        <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="http://localhost:3000/manifest.json">
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>Little Lemon</title>
+  <script defer="" src="./Little Lemon_files/bundle.js"></script><style>:root {
+  --primary-color:#495E57;
+  --secondary-color: #F4CE14;
+}
+
+* {
+  margin: 0;
+  padding:0;
+}
+
+body {
+  margin: 0;
+  width: auto;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+p{
+  font-family: 'Karla', sans-serif;
+}
+
+header{
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0
+  /* padding:auto 210px;
+  display: grid;
+  height:100px;
+  width:auto;
+  grid-template-columns: 2fr auto; */
+}
+header img{
+  height: 65px;
+  width: 216px;
+}
+
+nav {
+  background-color: white;
+  font-family: 'Karla', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+}
+ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+li a {
+  text-decoration: none;
+  color: #333333;
+}
+
+.homepage-main{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: var(--primary-color);
+}
+.homepage{
+  max-width: 900px;
+  padding: 80px 0 40px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  position: relative;
+}
+.homepage-img{
+  height: 475px;
+  width: 375px;
+  border-radius: 25px;
+  position: absolute;
+  top: 40px;
+  right: 0px;
+}
+.homepage-img-container{
+  margin: 50px auto auto;
+}
+
+.yellow-header{
+  color: var(--secondary-color);
+  margin-bottom: 0;
+  font-family: "Markazi Text", serif;
+  font-size: 64px;
+  font-weight: 600;
+}
+
+.white-subheader{
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: white;
+  font-family: "Markazi Text", serif;
+  font-size: 40px;
+  font-weight: 400;
+}
+
+p.white-parag{
+  color:white;
+  margin-bottom: 80px;
+  max-width: 65ch;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+button{
+  height: 60px;
+  width: 200px;
+  border: 0;
+  border-radius: 16px;
+  color:#333333;
+  background-color: var(--secondary-color);
+  font-family: 'Karla', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+button:hover{
+  color: white;
+  background-color: #333333;
+}
+
+.specials-main{
+  width:100% ;
+  max-width: 900px;
+  margin: 0 auto 100px;
+  display: grid;
+  grid-template-rows: 2 auto;
+  align-items: center;
+}
+div.specials-top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 100px 0;
+}
+h3.specials{
+  font-family: 'Karla', sans-serif;
+  font-size: 40px;
+  color: #333333;
+}
+
+.special-menu-items{
+  display: flex;
+  justify-content: space-evenly;
+  gap:20px;
+  align-items: center;
+
+}
+.special-menu-item{
+  flex:33.33% 1;
+  height: 440px;
+  width: auto;
+  background-color: #EDEFEE;
+  border-radius: 16px 16px 0 0;
+}
+.specials-image{
+  height:180px;
+  width: 100%;
+  border-radius: 16px 16px 0 0;
+}
+
+.specials-h4{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 20px 30px;
+  font-family: 'Karla', sans-serif;
+  font-size: 18px;
+}
+h4.specials-item-title{
+  font-weight: 800;
+}
+h4.price-tag{
+  margin-right: 0;
+  color:#EE9972;
+  font-weight: 800;
+}
+.specials-text{
+  height: 170px;
+  position: relative;
+}
+p.specials-description{
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 16px;
+  padding:0 20px;
+}
+p.order-link{
+  color:#333333;
+  font-weight: 900;
+  padding:0 20px;
+  position: absolute;
+  bottom: 0;
+}
+.specials-text img{
+  position: absolute;
+  bottom:0;
+  left:155px;
+}
+footer{
+  height: 450px;
+  width: auto;
+  font-size: 20px;
+  overflow:hidden;
+}
+
+footer div.footer{
+  padding: 200px 210px 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  align-items:top;
+}
+
+footer ul{
+  display:block;
+  float: left;
+  margin: auto;
+  font-family: 'Karla', sans-serif;
+}
+
+.footer-header {
+  font-weight:700;
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+  header {
+    grid-template-columns: 1fr; /* Change to a single column layout for tablets */
+  }
+
+  header img {
+    margin-left: 0; /* Remove left margin for better alignment on smaller screens */
+  }
+
+  nav {
+    margin: 0; /* Remove horizontal margin for better fit on smaller screens */
+  }
+  footer{
+    padding: 0 20px;
+  }
+}
+
+/* Responsive styles for mobile */
+@media only screen and (max-width: 480px) {
+  header {
+    grid-template-columns: 1fr; /* Change to a single column layout for mobile */
+    align-items: center;
+
+  }
+  header img {
+    margin-left: 0; /* Remove left margin for better alignment on smaller screens */
+  }
+
+  nav {
+    margin: 0; /* Remove horizontal margin for better fit on smaller screens */
+  }
+  footer{
+    padding: 0 20px;
+  }
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9pbmRleC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSx1QkFBdUI7RUFDdkIsMEJBQTBCO0FBQzVCOztBQUVBO0VBQ0UsU0FBUztFQUNULFNBQVM7QUFDWDs7QUFFQTtFQUNFLFNBQVM7RUFDVCxXQUFXO0VBQ1g7O2NBRVk7RUFDWixtQ0FBbUM7RUFDbkMsa0NBQWtDO0FBQ3BDOztBQUVBO0VBQ0U7YUFDVztBQUNiO0FBQ0E7RUFDRSxnQ0FBZ0M7QUFDbEM7O0FBRUE7RUFDRSxnQkFBZ0I7RUFDaEIsV0FBVztFQUNYLGNBQWM7RUFDZCxhQUFhO0VBQ2IsOEJBQThCO0VBQzlCLG1CQUFtQjtFQUNuQixjQUFjO0VBQ2Q7Ozs7b0NBSWtDO0FBQ3BDO0FBQ0E7RUFDRSxZQUFZO0VBQ1osWUFBWTtBQUNkOztBQUVBO0VBQ0UsdUJBQXVCO0VBQ3ZCLGdDQUFnQztFQUNoQyxlQUFlO0VBQ2YsZ0JBQWdCO0FBQ2xCO0FBQ0E7RUFDRSxxQkFBcUI7RUFDckIsYUFBYTtFQUNiLFNBQVM7QUFDWDs7QUFFQTtFQUNFLHFCQUFxQjtFQUNyQixjQUFjO0FBQ2hCOztBQUVBO0VBQ0UsV0FBVztFQUNYLGFBQWE7RUFDYix1QkFBdUI7RUFDdkIsc0NBQXNDO0FBQ3hDO0FBQ0E7RUFDRSxnQkFBZ0I7RUFDaEIsc0JBQXNCO0VBQ3RCLGFBQWE7RUFDYixxQ0FBcUM7RUFDckMsa0JBQWtCO0FBQ3BCO0FBQ0E7RUFDRSxhQUFhO0VBQ2IsWUFBWTtFQUNaLG1CQUFtQjtFQUNuQixrQkFBa0I7RUFDbEIsU0FBUztFQUNULFVBQVU7QUFDWjtBQUNBO0VBQ0Usc0JBQXNCO0FBQ3hCOztBQUVBO0VBQ0UsNkJBQTZCO0VBQzdCLGdCQUFnQjtFQUNoQixrQ0FBa0M7RUFDbEMsZUFBZTtFQUNmLGdCQUFnQjtBQUNsQjs7QUFFQTtFQUNFLGFBQWE7RUFDYixtQkFBbUI7RUFDbkIsWUFBWTtFQUNaLGtDQUFrQztFQUNsQyxlQUFlO0VBQ2YsZ0JBQWdCO0FBQ2xCOztBQUVBO0VBQ0UsV0FBVztFQUNYLG1CQUFtQjtFQUNuQixlQUFlO0VBQ2YsZUFBZTtFQUNmLGdCQUFnQjtBQUNsQjs7QUFFQTtFQUNFLFlBQVk7RUFDWixZQUFZO0VBQ1osU0FBUztFQUNULG1CQUFtQjtFQUNuQixhQUFhO0VBQ2Isd0NBQXdDO0VBQ3hDLGdDQUFnQztFQUNoQyxlQUFlO0VBQ2YsZ0JBQWdCO0FBQ2xCO0FBQ0E7RUFDRSxZQUFZO0VBQ1oseUJBQXlCO0FBQzNCOztBQUVBO0VBQ0UsV0FBVztFQUNYLGdCQUFnQjtFQUNoQixvQkFBb0I7RUFDcEIsYUFBYTtFQUNiLDBCQUEwQjtFQUMxQixtQkFBbUI7QUFDckI7QUFDQTtFQUNFLGFBQWE7RUFDYiw4QkFBOEI7RUFDOUIsbUJBQW1CO0VBQ25CLGVBQWU7QUFDakI7QUFDQTtFQUNFLGdDQUFnQztFQUNoQyxlQUFlO0VBQ2YsY0FBYztBQUNoQjs7QUFFQTtFQUNFLGFBQWE7RUFDYiw2QkFBNkI7RUFDN0IsUUFBUTtFQUNSLG1CQUFtQjs7QUFFckI7QUFDQTtFQUNFLGFBQVc7RUFDWCxhQUFhO0VBQ2IsV0FBVztFQUNYLHlCQUF5QjtFQUN6Qiw0QkFBNEI7QUFDOUI7QUFDQTtFQUNFLFlBQVk7RUFDWixXQUFXO0VBQ1gsNEJBQTRCO0FBQzlCOztBQUVBO0VBQ0UsYUFBYTtFQUNiLDhCQUE4QjtFQUM5Qix1QkFBdUI7RUFDdkIsZ0NBQWdDO0VBQ2hDLGVBQWU7QUFDakI7QUFDQTtFQUNFLGdCQUFnQjtBQUNsQjtBQUNBO0VBQ0UsZUFBZTtFQUNmLGFBQWE7RUFDYixnQkFBZ0I7QUFDbEI7QUFDQTtFQUNFLGFBQWE7RUFDYixrQkFBa0I7QUFDcEI7QUFDQTtFQUNFLDJCQUEyQjtFQUMzQixnQkFBZ0I7RUFDaEIsZUFBZTtFQUNmLGNBQWM7QUFDaEI7QUFDQTtFQUNFLGFBQWE7RUFDYixnQkFBZ0I7RUFDaEIsY0FBYztFQUNkLGtCQUFrQjtFQUNsQixTQUFTO0FBQ1g7QUFDQTtFQUNFLGtCQUFrQjtFQUNsQixRQUFRO0VBQ1IsVUFBVTtBQUNaO0FBQ0E7RUFDRSxhQUFhO0VBQ2IsV0FBVztFQUNYLGVBQWU7RUFDZixlQUFlO0FBQ2pCOztBQUVBO0VBQ0Usc0JBQXNCO0VBQ3RCLGFBQWE7RUFDYixxQ0FBcUM7RUFDckMsU0FBUztFQUNULGVBQWU7QUFDakI7O0FBRUE7RUFDRSxhQUFhO0VBQ2IsV0FBVztFQUNYLFlBQVk7RUFDWixnQ0FBZ0M7QUFDbEM7O0FBRUE7RUFDRSxlQUFlO0FBQ2pCOzs7OztBQUtBO0VBQ0U7SUFDRSwwQkFBMEIsRUFBRSxpREFBaUQ7RUFDL0U7O0VBRUE7SUFDRSxjQUFjLEVBQUUsK0RBQStEO0VBQ2pGOztFQUVBO0lBQ0UsU0FBUyxFQUFFLCtEQUErRDtFQUM1RTtFQUNBO0lBQ0UsZUFBZTtFQUNqQjtBQUNGOztBQUVBLGlDQUFpQztBQUNqQztFQUNFO0lBQ0UsMEJBQTBCLEVBQUUsZ0RBQWdEO0lBQzVFLG1CQUFtQjs7RUFFckI7RUFDQTtJQUNFLGNBQWMsRUFBRSwrREFBK0Q7RUFDakY7O0VBRUE7SUFDRSxTQUFTLEVBQUUsK0RBQStEO0VBQzVFO0VBQ0E7SUFDRSxlQUFlO0VBQ2pCO0FBQ0YiLCJzb3VyY2VzQ29udGVudCI6WyI6cm9vdCB7XG4gIC0tcHJpbWFyeS1jb2xvcjojNDk1RTU3O1xuICAtLXNlY29uZGFyeS1jb2xvcjogI0Y0Q0UxNDtcbn1cblxuKiB7XG4gIG1hcmdpbjogMDtcbiAgcGFkZGluZzowO1xufVxuXG5ib2R5IHtcbiAgbWFyZ2luOiAwO1xuICB3aWR0aDogYXV0bztcbiAgZm9udC1mYW1pbHk6IC1hcHBsZS1zeXN0ZW0sIEJsaW5rTWFjU3lzdGVtRm9udCwgJ1NlZ29lIFVJJywgJ1JvYm90bycsICdPeHlnZW4nLFxuICAgICdVYnVudHUnLCAnQ2FudGFyZWxsJywgJ0ZpcmEgU2FucycsICdEcm9pZCBTYW5zJywgJ0hlbHZldGljYSBOZXVlJyxcbiAgICBzYW5zLXNlcmlmO1xuICAtd2Via2l0LWZvbnQtc21vb3RoaW5nOiBhbnRpYWxpYXNlZDtcbiAgLW1vei1vc3gtZm9udC1zbW9vdGhpbmc6IGdyYXlzY2FsZTtcbn1cblxuY29kZSB7XG4gIGZvbnQtZmFtaWx5OiBzb3VyY2UtY29kZS1wcm8sIE1lbmxvLCBNb25hY28sIENvbnNvbGFzLCAnQ291cmllciBOZXcnLFxuICAgIG1vbm9zcGFjZTtcbn1cbnB7XG4gIGZvbnQtZmFtaWx5OiAnS2FybGEnLCBzYW5zLXNlcmlmO1xufVxuXG5oZWFkZXJ7XG4gIG1heC13aWR0aDogOTAwcHg7XG4gIHdpZHRoOiAxMDAlO1xuICBtYXJnaW46IDAgYXV0bztcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBwYWRkaW5nOiAxMHB4IDBcbiAgLyogcGFkZGluZzphdXRvIDIxMHB4O1xuICBkaXNwbGF5OiBncmlkO1xuICBoZWlnaHQ6MTAwcHg7XG4gIHdpZHRoOmF1dG87XG4gIGdyaWQtdGVtcGxhdGUtY29sdW1uczogMmZyIGF1dG87ICovXG59XG5oZWFkZXIgaW1ne1xuICBoZWlnaHQ6IDY1cHg7XG4gIHdpZHRoOiAyMTZweDtcbn1cblxubmF2IHtcbiAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7XG4gIGZvbnQtZmFtaWx5OiAnS2FybGEnLCBzYW5zLXNlcmlmO1xuICBmb250LXNpemU6IDE4cHg7XG4gIGZvbnQtd2VpZ2h0OiA2MDA7XG59XG51bCB7XG4gIGxpc3Qtc3R5bGUtdHlwZTogbm9uZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZ2FwOiAyMHB4O1xufVxuXG5saSBhIHtcbiAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xuICBjb2xvcjogIzMzMzMzMztcbn1cblxuLmhvbWVwYWdlLW1haW57XG4gIHdpZHRoOiAxMDAlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tcHJpbWFyeS1jb2xvcik7XG59XG4uaG9tZXBhZ2V7XG4gIG1heC13aWR0aDogOTAwcHg7XG4gIHBhZGRpbmc6IDgwcHggMCA0MHB4IDA7XG4gIGRpc3BsYXk6IGdyaWQ7XG4gIGdyaWQtdGVtcGxhdGUtY29sdW1uczogcmVwZWF0KDIsIDFmcik7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbn1cbi5ob21lcGFnZS1pbWd7XG4gIGhlaWdodDogNDc1cHg7XG4gIHdpZHRoOiAzNzVweDtcbiAgYm9yZGVyLXJhZGl1czogMjVweDtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICB0b3A6IDQwcHg7XG4gIHJpZ2h0OiAwcHg7XG59XG4uaG9tZXBhZ2UtaW1nLWNvbnRhaW5lcntcbiAgbWFyZ2luOiA1MHB4IGF1dG8gYXV0bztcbn1cblxuLnllbGxvdy1oZWFkZXJ7XG4gIGNvbG9yOiB2YXIoLS1zZWNvbmRhcnktY29sb3IpO1xuICBtYXJnaW4tYm90dG9tOiAwO1xuICBmb250LWZhbWlseTogXCJNYXJrYXppIFRleHRcIiwgc2VyaWY7XG4gIGZvbnQtc2l6ZTogNjRweDtcbiAgZm9udC13ZWlnaHQ6IDYwMDtcbn1cblxuLndoaXRlLXN1YmhlYWRlcntcbiAgbWFyZ2luLXRvcDogMDtcbiAgbWFyZ2luLWJvdHRvbTogMjBweDtcbiAgY29sb3I6IHdoaXRlO1xuICBmb250LWZhbWlseTogXCJNYXJrYXppIFRleHRcIiwgc2VyaWY7XG4gIGZvbnQtc2l6ZTogNDBweDtcbiAgZm9udC13ZWlnaHQ6IDQwMDtcbn1cblxucC53aGl0ZS1wYXJhZ3tcbiAgY29sb3I6d2hpdGU7XG4gIG1hcmdpbi1ib3R0b206IDgwcHg7XG4gIG1heC13aWR0aDogNjVjaDtcbiAgZm9udC1zaXplOiAxOHB4O1xuICBmb250LXdlaWdodDogNTAwO1xufVxuXG5idXR0b257XG4gIGhlaWdodDogNjBweDtcbiAgd2lkdGg6IDIwMHB4O1xuICBib3JkZXI6IDA7XG4gIGJvcmRlci1yYWRpdXM6IDE2cHg7XG4gIGNvbG9yOiMzMzMzMzM7XG4gIGJhY2tncm91bmQtY29sb3I6IHZhcigtLXNlY29uZGFyeS1jb2xvcik7XG4gIGZvbnQtZmFtaWx5OiAnS2FybGEnLCBzYW5zLXNlcmlmO1xuICBmb250LXNpemU6IDE4cHg7XG4gIGZvbnQtd2VpZ2h0OiA3MDA7XG59XG5idXR0b246aG92ZXJ7XG4gIGNvbG9yOiB3aGl0ZTtcbiAgYmFja2dyb3VuZC1jb2xvcjogIzMzMzMzMztcbn1cblxuLnNwZWNpYWxzLW1haW57XG4gIHdpZHRoOjEwMCUgO1xuICBtYXgtd2lkdGg6IDkwMHB4O1xuICBtYXJnaW46IDAgYXV0byAxMDBweDtcbiAgZGlzcGxheTogZ3JpZDtcbiAgZ3JpZC10ZW1wbGF0ZS1yb3dzOiAyIGF1dG87XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG59XG5kaXYuc3BlY2lhbHMtdG9we1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIG1hcmdpbjogMTAwcHggMDtcbn1cbmgzLnNwZWNpYWxze1xuICBmb250LWZhbWlseTogJ0thcmxhJywgc2Fucy1zZXJpZjtcbiAgZm9udC1zaXplOiA0MHB4O1xuICBjb2xvcjogIzMzMzMzMztcbn1cblxuLnNwZWNpYWwtbWVudS1pdGVtc3tcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBzcGFjZS1ldmVubHk7XG4gIGdhcDoyMHB4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuXG59XG4uc3BlY2lhbC1tZW51LWl0ZW17XG4gIGZsZXg6MzMuMzMlO1xuICBoZWlnaHQ6IDQ0MHB4O1xuICB3aWR0aDogYXV0bztcbiAgYmFja2dyb3VuZC1jb2xvcjogI0VERUZFRTtcbiAgYm9yZGVyLXJhZGl1czogMTZweCAxNnB4IDAgMDtcbn1cbi5zcGVjaWFscy1pbWFnZXtcbiAgaGVpZ2h0OjE4MHB4O1xuICB3aWR0aDogMTAwJTtcbiAgYm9yZGVyLXJhZGl1czogMTZweCAxNnB4IDAgMDtcbn1cblxuLnNwZWNpYWxzLWg0e1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XG4gIHBhZGRpbmc6IDIwcHggMjBweCAzMHB4O1xuICBmb250LWZhbWlseTogJ0thcmxhJywgc2Fucy1zZXJpZjtcbiAgZm9udC1zaXplOiAxOHB4O1xufVxuaDQuc3BlY2lhbHMtaXRlbS10aXRsZXtcbiAgZm9udC13ZWlnaHQ6IDgwMDtcbn1cbmg0LnByaWNlLXRhZ3tcbiAgbWFyZ2luLXJpZ2h0OiAwO1xuICBjb2xvcjojRUU5OTcyO1xuICBmb250LXdlaWdodDogODAwO1xufVxuLnNwZWNpYWxzLXRleHR7XG4gIGhlaWdodDogMTcwcHg7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbn1cbnAuc3BlY2lhbHMtZGVzY3JpcHRpb257XG4gIGNvbG9yOiB2YXIoLS1wcmltYXJ5LWNvbG9yKTtcbiAgZm9udC13ZWlnaHQ6IDYwMDtcbiAgZm9udC1zaXplOiAxNnB4O1xuICBwYWRkaW5nOjAgMjBweDtcbn1cbnAub3JkZXItbGlua3tcbiAgY29sb3I6IzMzMzMzMztcbiAgZm9udC13ZWlnaHQ6IDkwMDtcbiAgcGFkZGluZzowIDIwcHg7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgYm90dG9tOiAwO1xufVxuLnNwZWNpYWxzLXRleHQgaW1ne1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIGJvdHRvbTowO1xuICBsZWZ0OjE1NXB4O1xufVxuZm9vdGVye1xuICBoZWlnaHQ6IDQ1MHB4O1xuICB3aWR0aDogYXV0bztcbiAgZm9udC1zaXplOiAyMHB4O1xuICBvdmVyZmxvdzpoaWRkZW47XG59XG5cbmZvb3RlciBkaXYuZm9vdGVye1xuICBwYWRkaW5nOiAyMDBweCAyMTBweCAwO1xuICBkaXNwbGF5OiBncmlkO1xuICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IHJlcGVhdCg0LCAxZnIpO1xuICBnYXA6IDIwcHg7XG4gIGFsaWduLWl0ZW1zOnRvcDtcbn1cblxuZm9vdGVyIHVse1xuICBkaXNwbGF5OmJsb2NrO1xuICBmbG9hdDogbGVmdDtcbiAgbWFyZ2luOiBhdXRvO1xuICBmb250LWZhbWlseTogJ0thcmxhJywgc2Fucy1zZXJpZjtcbn1cblxuLmZvb3Rlci1oZWFkZXIge1xuICBmb250LXdlaWdodDo3MDA7XG59XG5cblxuXG5cbkBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNzY4cHgpIHtcbiAgaGVhZGVyIHtcbiAgICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IDFmcjsgLyogQ2hhbmdlIHRvIGEgc2luZ2xlIGNvbHVtbiBsYXlvdXQgZm9yIHRhYmxldHMgKi9cbiAgfVxuXG4gIGhlYWRlciBpbWcge1xuICAgIG1hcmdpbi1sZWZ0OiAwOyAvKiBSZW1vdmUgbGVmdCBtYXJnaW4gZm9yIGJldHRlciBhbGlnbm1lbnQgb24gc21hbGxlciBzY3JlZW5zICovXG4gIH1cblxuICBuYXYge1xuICAgIG1hcmdpbjogMDsgLyogUmVtb3ZlIGhvcml6b250YWwgbWFyZ2luIGZvciBiZXR0ZXIgZml0IG9uIHNtYWxsZXIgc2NyZWVucyAqL1xuICB9XG4gIGZvb3RlcntcbiAgICBwYWRkaW5nOiAwIDIwcHg7XG4gIH1cbn1cblxuLyogUmVzcG9uc2l2ZSBzdHlsZXMgZm9yIG1vYmlsZSAqL1xuQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA0ODBweCkge1xuICBoZWFkZXIge1xuICAgIGdyaWQtdGVtcGxhdGUtY29sdW1uczogMWZyOyAvKiBDaGFuZ2UgdG8gYSBzaW5nbGUgY29sdW1uIGxheW91dCBmb3IgbW9iaWxlICovXG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcblxuICB9XG4gIGhlYWRlciBpbWcge1xuICAgIG1hcmdpbi1sZWZ0OiAwOyAvKiBSZW1vdmUgbGVmdCBtYXJnaW4gZm9yIGJldHRlciBhbGlnbm1lbnQgb24gc21hbGxlciBzY3JlZW5zICovXG4gIH1cblxuICBuYXYge1xuICAgIG1hcmdpbjogMDsgLyogUmVtb3ZlIGhvcml6b250YWwgbWFyZ2luIGZvciBiZXR0ZXIgZml0IG9uIHNtYWxsZXIgc2NyZWVucyAqL1xuICB9XG4gIGZvb3RlcntcbiAgICBwYWRkaW5nOiAwIDIwcHg7XG4gIH1cbn0iXSwic291cmNlUm9vdCI6IiJ9 */</style></head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"><header><img src="./Little Lemon_files/logo.svg" alt="company logo"><nav><ul><li><a href="http://localhost:3000/home">Home</a></li><li><a href="http://localhost:3000/about">About</a></li><li><a href="http://localhost:3000/menu">Menu</a></li><li><a href="http://localhost:3000/reservations">Reservations</a></li><li><a href="http://localhost:3000/orderonline">Order Online</a></li><li><a href="http://localhost:3000/login">Login</a></li></ul></nav></header><main><div class="homepage-main"><div class="homepage"><div><h1 class="yellow-header">Little Lemon</h1><h3 class="white-subheader">San Diego</h3><p class="white-parag">We are family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p><button>Reserve a table</button></div><div class="homepage-img-container"><img class="homepage-img" src="./Little Lemon_files/restauranfood.jpg" alt="homepage image"></div></div></div><section class="specials-main"><div class="specials-top"><h3 class="specials">Specials</h3><button>Online Menu</button></div><div class="special-menu-items"><div class="special-menu-item"><img class="specials-image" src="./Little Lemon_files/greek salad.jpeg" alt="greek-salad-image"><div class="specials-h4"><h4 class="specials-item-title">Greek Salad</h4><h4 class="price-tag">$12.99</h4></div><div class="specials-text"><p class="specials-description">The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons. </p><p class="order-link"><a>Order a delivery</a></p><img src="./Little Lemon_files/Union.svg"></div></div><div class="special-menu-item"><img class="specials-image" src="./Little Lemon_files/bruschetta.jpeg" alt="bruschetta image"><div class="specials-h4"><h4 class="specials-item-title">Bruschetta</h4><h4 class="price-tag">$5.99</h4></div><div class="specials-text"><p class="specials-description">Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil. </p><p class="order-link"><a>Order a delivery</a></p><img src="./Little Lemon_files/Union.svg"></div></div><div class="special-menu-item"><img class="specials-image" src="./Little Lemon_files/lemon-cake.jpeg" alt="lemon cake image"><div class="specials-h4"><h4 class="specials-item-title">Lemon Dessert</h4><h4 class="price-tag">$8.99</h4></div><div class="specials-text"><p class="specials-description">This comes straight from grandma’s recipe book, every last ingredient has been sourced and is as authentic as can be imagined. </p><p class="order-link"><a>Order a delivery</a></p><img src="./Little Lemon_files/Union.svg"></div></div></div></section><div class="customers-say"><div class="rating-card"><img><h6>Leslie Bean</h6><i></i><p></p></div><div class="rating-card"><img><h6>Leslie Bean</h6><i></i><p></p></div><div class="rating-card"><img><h6>Leslie Bean</h6><i></i><p></p></div><div class="rating-card"><img><h6>Leslie Bean</h6><i></i><p></p></div></div><div class="about"><div><h1>Little Lemon</h1><h3>San Diego</h3><p>Embark on a culinary voyage at The Little Lemon, a San Diego hotspot opened in 2015 by Adrian and Mario. Our family-owned Mediterranean restaurant offers a modern take on classic recipes, blending tradition with innovation. From savory mezze to fresh seafood, each dish reflects our commitment to quality and hospitality. Join us and experience the vibrant flavors of the Mediterranean in a welcoming atmosphere.</p></div><div><img><img></div></div><div class="call-to-action"><div><h1>Taste the Mediterranean Fusion! Reserve Your Table Now.</h1><p>Experience the perfect blend of tradition and innovation at The Little Lemon. Indulge in our tantalizing dishes crafted with care by Adrian and Mario. Your culinary adventure awaits!</p></div><div><img><img></div></div></main><footer><div class="footer"><img src="./Little Lemon_files/logo.svg" alt="company logo"><div class="links-list"><ul><li class="footer-header">Doormat Navigation:</li><li><a href="http://localhost:3000/home">Home</a></li><li><a href="http://localhost:3000/about">About</a></li><li><a href="http://localhost:3000/menu">Menu</a></li><li><a href="http://localhost:3000/reservations">Reservations</a></li><li><a href="http://localhost:3000/orderonline">Order Online</a></li><li><a href="http://localhost:3000/login">Login</a></li></ul></div><div><ul><li class="footer-header">Contact:</li><li>Address</li><li>Phone number</li><li>Email</li></ul></div><div><ul><li class="footer-header">Social Media links:</li><li><a href="http://localhost:3000/facebook.com">Facebook</a></li><li><a href="http://localhost:3000/instagram.com">Instagram</a></li><li><a href="http://localhost:3000/yelp.com">Yelp</a></li></ul></div></div></footer></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  
+
+</body></html>

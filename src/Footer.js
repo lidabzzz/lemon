@@ -1,8 +1,8 @@
 function Footer() {
     return (
         <footer>
-            <div className="footer">
-            <img src="/images/logo.svg" alt="company logo"/>
+            <div className="footer-section">
+            <img className="logo-img" src="/images/logo.svg" alt="company logo"/>
             <div className="links-list">
                 <ul>
                     <li className="footer-header">Doormat Navigation:</li>
