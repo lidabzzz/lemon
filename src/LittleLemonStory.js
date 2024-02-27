@@ -1,6 +1,6 @@
 function LittleLemonStory() {
     return(
-        <section className="about">
+        <section className="about" id="about">
             <div>
             <h1>Little Lemon</h1>
             <h3>San Diego</h3>
@@ -10,8 +10,8 @@ function LittleLemonStory() {
             </div>
             </div>
             <div className="owners-images">
-                <img className="owners-image owners-image-1" src="/images/owners-A.jpeg" alt="image of the owners"/>
-                <img className="owners-image owners-image-2" src="/images/owners-B.jpeg" alt="image of the owners"/>
+                <img className="owners-image owners-image-1" src="/images/owners-A.jpeg" alt="the owners"/>
+                <img className="owners-image owners-image-2" src="/images/owners-B.jpeg" alt="the owners"/>
             </div>
 
         </section>

@@ -66,7 +66,7 @@ header{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0
+  padding: 10px 0;
 }
 
 
@@ -86,6 +86,32 @@ li a {
   text-decoration: none;
   color: #333333;
 }
+.burger-menu {
+  display: none; /* Hide burger menu by default */
+  cursor: pointer;
+}
+
+.line {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 5px;
+  transition: transform 0.3s ease;
+}
+
+.open {
+  transform:initial;
+}
+
+.menu {
+  list-style-type: none;
+  display: flex;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
 
 /* Home Section: */
 
@@ -359,7 +385,7 @@ footer{
 }
 .footer-section{
   display: flex;
-  justify-content: space-evenly;
+  justify-content:space-between;
   padding:100px 0;
 }
 
@@ -377,38 +403,119 @@ footer{
 
 
 
-@media only screen and (max-width: 768px) {
-  header {
-    grid-template-columns: 1fr; /* Change to a single column layout for tablets */
-  }
-
-  header img {
-    margin-left: 0; /* Remove left margin for better alignment on smaller screens */
-  }
-
-  nav {
-    margin: 0; /* Remove horizontal margin for better fit on smaller screens */
-  }
-  footer{
-    padding: 0 20px;
-  }
-}
-
 /* Responsive styles for mobile */
 @media only screen and (max-width: 480px) {
-  header {
-    grid-template-columns: 1fr; /* Change to a single column layout for mobile */
-    align-items: center;
+  *{
+    margin: 0 auto;
+    padding: 0;
+    overflow:scroll;
+    line-height: 1;
+  }
+  p{
+    font-size: 16px;
+  }
+
+  /*burger-menu:*/
+
+  .burger-menu {
+    display: block; 
+  }
+
+.menu {
+    display: none; 
+    flex-direction: column;
+    position: absolute;
+    top:  9%;
+    left:0;
+    background-color: #f9f9f9;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+}
+
+.menu.open {
+    display: flex; 
+}
+
+.menu li {
+    margin: 0;
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+  .homepage{
+    display: flex;
+    text-align: center;
+  }
+  .homepage-img{
+    display: none;
+  }
+  .links-list{
+    display:none;
+  }
+  .specials-main{
+    margin: 20px auto;
+  }
+
+div.specials-top{
+  margin: 0 auto;
+    padding:20px 0;
+    display: flex;
+    flex-direction: column;
+  }
+  h3.specials{
+    font-size: 30px;
+    padding-bottom: 10px;
+  }
+  .special-menu-items{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .customers-say{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+  }
+  .rating-card{
+    margin-bottom: 20px;
+  }
+  .about{
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .about-p{
+    padding: 20px 0;
+  }
+  .owners-image-2{
+    display: none;
+  }
+  .owners-image-1{
+    z-index: 2;
+    position: relative;
+    filter: none;
+  }
+  .call-to-action{
+    padding: 40px 0;
+  }
+  .call-to-action p{
+    padding: 20px 0;
+  }
+  .footer{
+    margin: 0 auto;
 
   }
-  header img {
-    margin-left: 0; /* Remove left margin for better alignment on smaller screens */
+  .footer-section{
+    display: flex;
+    flex-direction: column-reverse;
+    padding:20px 0;
   }
-
-  nav {
-    margin: 0; /* Remove horizontal margin for better fit on smaller screens */
-  }
-  footer{
-    padding: 0 20px;
+  .footer-section div{
+    margin-bottom: 10px;
+  }  .links-list div{
+    padding-bottom: 20px;
   }
 }
