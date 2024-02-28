@@ -1,3 +1,4 @@
+
 function Reservation() {
     return(
         <section className="reservations-main">
@@ -15,6 +16,9 @@ function Reservation() {
                     <label>
                         Email:
                         <input type="email" name="email"/>
+                    </label>
+                    <label>
+                        Phone number:
                     </label>
                 </form>
             </div>
