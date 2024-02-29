@@ -1,0 +1,76 @@
+.reservations h3{
+    font-family: "Markazi Text", serif;
+    color: white;
+    font-size: 48px;
+    text-align: center;
+    font-weight: 500;
+}
+
+
+.reservations-main{
+    min-height: max-content;
+    background-color: var(--primary-color);
+    flex: 1;
+}
+
+  .reservations{
+    max-width: 900px;
+    width: 100%;
+    margin: 100px auto 50px;
+    padding: 50px 0 30px;
+    font-family: 'Karla', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    border: solid white 3px;
+    border-radius: 10px;
+
+}
+
+
+.reservation-form{
+    width: 80%;
+    margin: 0 auto;
+    color: white;
+    padding: 50px 0 30px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: 5;
+    place-items: center;
+}
+.reservation-form input,
+select, textarea{
+  display: block;
+  width: 200px;
+  padding: 0.6rem 0.5rem;
+  margin: 10px;
+  border: 0;
+  font-family: 'Karla', sans-serif;
+  color: #495E57;
+  font-weight: 500;
+  border-radius: 5px;
+  font-size: 16px;
+
+}
+.reservation-form select{
+    width: 220px;
+}
+
+textarea{
+    margin: 10px 10px 50px;
+    width: 565px;
+    resize: none;
+}
+.note-input{
+    place-self: start;
+    margin: 0 60px;
+}
+
+/* .reservation-form .note-input, */
+.reservation-form .submit-button, 
+.note-input {
+    grid-column: span 2 / span 2;
+}
+
+
+
+

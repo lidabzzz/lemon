@@ -7,7 +7,7 @@ function Specials() {
             </div>
             <div className="special-menu-items">
                 <div className="special-menu-item">
-                    <img class="specials-image" src="/images/greek-salad.jpeg" alt="Greek Salad"/>
+                    <img class="specials-image" src="/images/greeksalad.jpeg" alt="Greek Salad"/>
                     <div className="specials-h4">
                         <h4 className="specials-item-title">Greek Salad</h4>
                         <h4 className="price-tag">$12.99</h4>

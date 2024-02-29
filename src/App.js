@@ -2,7 +2,7 @@ import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import Reservation from './Reservation';
+import BookingForm from './BookingForm';
 
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
       <Routes>
         <Route path="*" element={<Navigate to="/" />} />
         <Route path="/" element={<Main />} />
-        <Route path="/reservations" element={<Reservation />} />
+        <Route path="/reservations" element={<BookingForm />} />
       </Routes>
     </BrowserRouter>
     <Footer/>

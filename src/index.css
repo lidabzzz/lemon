@@ -8,6 +8,11 @@
   padding:0;
 }
 
+html,body,#root {
+  height: 100%;
+  width: 100%;
+}
+
 body {
   margin: 0;
   width: auto;
@@ -16,6 +21,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
 }
 
 code {
@@ -402,7 +412,6 @@ footer{
 
 
 
-
 /* Responsive styles for mobile */
 @media only screen and (max-width: 480px) {
   *{
@@ -418,11 +427,11 @@ footer{
   /*burger-menu:*/
 
   .burger-menu {
-    display: block; 
+    display: block;
   }
 
 .menu {
-    display: none; 
+    display: none;
     flex-direction: column;
     position: absolute;
     top:  9%;
@@ -435,7 +444,7 @@ footer{
 }
 
 .menu.open {
-    display: flex; 
+    display: flex;
 }
 
 .menu li {
