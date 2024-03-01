@@ -2,7 +2,16 @@ import { useState } from "react";
 import './Form.css';
 
 function BookingForm() {
-    const [inputs, setInputs] = useState({});
+    const [inputs, setInputs] = useState({
+        username: "",
+        email: "",
+        numberOfGuests: "4",
+        occasion: "None",
+        selectedTime: "17:00",
+        date: ""
+
+    });
+    const [availableTimes] = useState(['17:00', '18:00', '19:00', '20:00', '21:00']);
 
     const handleChange = (event) => {
         const name = event.target.name;
@@ -10,9 +19,18 @@ function BookingForm() {
         setInputs(values => ({...values, [name]: value}))
       }
 
+
       const handleSubmit = (event) => {
         event.preventDefault();
-        console.log(inputs);
+        alert("Form Submitted!")
+        setInputs({
+        username: "",
+        email: "",
+        numberOfGuests: "4",
+        occasion: "None",
+        date: "",
+        selectedTime: "17:00"
+    });
       }
     return(
         <section className="reservations-main">
@@ -24,7 +42,7 @@ function BookingForm() {
                         <input
                         type="text"
                         name="username"
-                        value={inputs.username || ""}
+                        value={inputs.username}
                         onChange={handleChange}
                         required
                         />
@@ -34,7 +52,7 @@ function BookingForm() {
                         <input
                         type="email"
                         name="email"
-                        value={inputs.email || ""}
+                        value={inputs.email}
                         onChange={handleChange}
                         required
                         />
@@ -46,14 +64,14 @@ function BookingForm() {
                             name="numberOfGuests"
                             min={1}
                             max={10}
-                            value={inputs.numberOfGuests || "4"}
+                            value={inputs.numberOfGuests}
                             onChange={handleChange}
                             required
                         />
                     </label>
                     <label className="occasion-input">
                         Special occasion:
-                        <select name="occasion" value={inputs.occasion || "None"} onChange={handleChange}>
+                        <select name="occasion" value={inputs.occasion} onChange={handleChange}>
                             <option value="None">None</option>
                             <option value="Engagement">Engagement</option>
                             <option value="Birthday">Birthday</option>
@@ -65,7 +83,7 @@ function BookingForm() {
                         <input
                         type="date"
                         name="date"
-                        value={inputs.date || ""}
+                        value={inputs.date}
                         onChange={handleChange}
                         required
                         />
@@ -73,24 +91,15 @@ function BookingForm() {
                     <label className="time-input">
                         Reservation time:
                         <select
-                        name="selectedTime"
-                        value={inputs.selectedTime || "18:00"}
-                        onChange={handleChange}
-                        required>
-                            <option value="17:00">17:00</option>
-                            <option value="18:00">18:00</option>
-                            <option value="19:00">19:00</option>
-                            <option value="20:00">20:00</option>
-                            <option value="21:00">21:00</option>
+                            name="selectedTime"
+                            required
+                            onChange={handleChange}
+                            value={inputs.selectedTime}
+                        >
+                            {availableTimes.map((time) => (
+                                <option value={time}>{time}</option>
+                            ))}
                         </select>
-                    </label>
-                    <label className="note-input">
-                        Notes:
-                        <textarea
-                        name="notes"
-                        maxLength={100}
-                        value={inputs.notes || ""}
-                        onChange={handleChange}/>
                     </label>
                     <button className="submit-button" type="submit">Reserve</button>
                 </form>

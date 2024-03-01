@@ -4,6 +4,7 @@
     font-size: 48px;
     text-align: center;
     font-weight: 500;
+    text-decoration: underline #F4CE14;
 }
 
 
@@ -13,9 +14,8 @@
     flex: 1;
 }
 
-  .reservations{
+.reservations{
     max-width: 900px;
-    width: 100%;
     margin: 100px auto 50px;
     padding: 50px 0 30px;
     font-family: 'Karla', sans-serif;
@@ -23,7 +23,6 @@
     font-size: 18px;
     border: solid white 3px;
     border-radius: 10px;
-
 }
 
 
@@ -31,17 +30,14 @@
     width: 80%;
     margin: 0 auto;
     color: white;
-    padding: 50px 0 30px;
+    padding: 50px 0 0;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-rows: 5;
     place-items: center;
 }
-.reservation-form input,
-select, textarea{
-  display: block;
-  width: 200px;
-  padding: 0.6rem 0.5rem;
+input, select{
+  width: 100%;
+  padding: 0.6rem 0.5rem 0.6rem;
   margin: 10px;
   border: 0;
   font-family: 'Karla', sans-serif;
@@ -49,24 +45,23 @@ select, textarea{
   font-weight: 500;
   border-radius: 5px;
   font-size: 16px;
-
-}
-.reservation-form select{
-    width: 220px;
 }
 
-textarea{
-    margin: 10px 10px 50px;
-    width: 565px;
-    resize: none;
-}
-.note-input{
-    place-self: start;
-    margin: 0 60px;
+label{
+    width:50%;
+    display: block;
 }
 
-/* .reservation-form .note-input, */
-.reservation-form .submit-button, 
+select{
+    width:110%;
+}
+
+button{
+    margin-top: 50px;
+}
+
+
+.reservation-form .submit-button,
 .note-input {
     grid-column: span 2 / span 2;
 }

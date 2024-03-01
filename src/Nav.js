@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from "react-router-dom";
 
 function Nav() {
     const [showMenu, setShowMenu] = useState(false);
@@ -6,6 +7,13 @@ function Nav() {
     const toggleMenu = () => {
         setShowMenu(!showMenu);
     };
+
+    const scrollToSection = (sectionId) => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth' });
+        }
+      };
 
     return (
         <nav>
@@ -15,11 +23,11 @@ function Nav() {
                 <div className={showMenu ? "line line3 open" : "line line3"}></div>
             </div>
             <ul className={showMenu ? "menu open" : "menu"}>
-                <li><a href="/">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#reservations">Reservations</a></li>
-                <li><a href="#orderonline">Order Online</a></li>
+                <li><Link to="/">Home</Link></li>
+                <li><Link onClick={() => scrollToSection("about")} to="/#about">About</Link></li>
+                <li><Link to="/#menu">Menu</Link></li>
+                <li><Link to="/reservations">Reservations</Link></li>
+                <li><Link to="/#order-online">Order Online</Link></li>
             </ul>
         </nav>
     );

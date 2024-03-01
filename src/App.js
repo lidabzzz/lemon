@@ -8,15 +8,15 @@ import BookingForm from './BookingForm';
 function App() {
   return (
     <>
-    <Header/>
     <BrowserRouter>
+    <Header/>
       <Routes>
         <Route path="*" element={<Navigate to="/" />} />
         <Route path="/" element={<Main />} />
         <Route path="/reservations" element={<BookingForm />} />
       </Routes>
+      <Footer/>
     </BrowserRouter>
-    <Footer/>
     </>
   );
 }
