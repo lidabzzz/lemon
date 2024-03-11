@@ -1,50 +1,40 @@
 import { useState } from "react";
 import './Form.css';
 
-function BookingForm() {
-    const [inputs, setInputs] = useState({
-        username: "",
-        email: "",
-        numberOfGuests: "4",
-        occasion: "None",
-        selectedTime: "17:00",
-        date: ""
+const initialData = {
+    username: "",
+    email: "",
+    numberOfGuests: "4",
+    occasion: "None",
+    selectedTime: "",
+    date: ""
+}
 
-    });
-    const [availableTimes] = useState(['17:00', '18:00', '19:00', '20:00', '21:00']);
+function BookingForm({ availableTimes, updateTimes, submitForm }) {
+    const [formData, setFormData] = useState(initialData);
 
     const handleChange = (event) => {
-        const name = event.target.name;
-        const value = event.target.value;
-        setInputs(values => ({...values, [name]: value}))
+        const {name, value} = event.target;
+        setFormData(values => ({...values, [name]: value}));
+        if (name === 'date') {
+            updateTimes(new Date(value));
+        }
       }
 
-
-      const handleSubmit = (event) => {
-        event.preventDefault();
-        alert("Form Submitted!")
-        setInputs({
-        username: "",
-        email: "",
-        numberOfGuests: "4",
-        occasion: "None",
-        date: "",
-        selectedTime: "17:00"
-    });
-      }
     return(
         <section className="reservations-main">
             <div className="reservations">
                 <h3>Little Lemon Reservation Form</h3>
-                <form onSubmit={handleSubmit} className="reservation-form">
+                <form onSubmit={(e) => submitForm(e, formData)} className="reservation-form">
                     <label className="name-input">
                         Name:
                         <input
                         type="text"
                         name="username"
-                        value={inputs.username}
+                        value={formData.username}
                         onChange={handleChange}
                         required
+                        aria-label="Name"
                         />
                     </label>
                     <label className="email-input">
@@ -52,9 +42,10 @@ function BookingForm() {
                         <input
                         type="email"
                         name="email"
-                        value={inputs.email}
+                        value={formData.email}
                         onChange={handleChange}
                         required
+                        aria-label="Email"
                         />
                     </label>
                     <label className="guest-input">
@@ -64,14 +55,20 @@ function BookingForm() {
                             name="numberOfGuests"
                             min={1}
                             max={10}
-                            value={inputs.numberOfGuests}
+                            value={formData.numberOfGuests}
                             onChange={handleChange}
                             required
+                            aria-label="Number of guests"
                         />
                     </label>
                     <label className="occasion-input">
                         Special occasion:
-                        <select name="occasion" value={inputs.occasion} onChange={handleChange}>
+                        <select
+                            name="occasion"
+                            value={formData.occasion}
+                            onChange={handleChange}
+                            aria-label="Special occasion"
+                        >
                             <option value="None">None</option>
                             <option value="Engagement">Engagement</option>
                             <option value="Birthday">Birthday</option>
@@ -83,9 +80,10 @@ function BookingForm() {
                         <input
                         type="date"
                         name="date"
-                        value={inputs.date}
+                        value={formData.date}
                         onChange={handleChange}
                         required
+                        aria-label="Reservation date"
                         />
                     </label>
                     <label className="time-input">
@@ -93,11 +91,12 @@ function BookingForm() {
                         <select
                             name="selectedTime"
                             required
-                            onChange={handleChange}
-                            value={inputs.selectedTime}
+                            onChange={(event) => setFormData({...formData, selectedTime:event.target.value})}
+                            value={formData.selectedTime}
+                            aria-label="Resercation time"
                         >
-                            {availableTimes.map((time) => (
-                                <option value={time}>{time}</option>
+                            {availableTimes && availableTimes.map((time) => (
+                                <option key={time} value={time} disabled={formData.selectedTime === time}>{time}</option>
                             ))}
                         </select>
                     </label>
