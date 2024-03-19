@@ -1,6 +1,7 @@
 import { useState } from "react";
 import './Form.css';
 
+
 const initialData = {
     username: "",
     email: "",
@@ -9,6 +10,7 @@ const initialData = {
     selectedTime: "",
     date: ""
 }
+
 
 function BookingForm({ availableTimes, updateTimes, submitForm }) {
     const [formData, setFormData] = useState(initialData);
@@ -26,20 +28,23 @@ function BookingForm({ availableTimes, updateTimes, submitForm }) {
             <div className="reservations">
                 <h3>Little Lemon Reservation Form</h3>
                 <form onSubmit={(e) => submitForm(e, formData)} className="reservation-form">
-                    <label className="name-input">
+                    <label className="name-input" for='textInput'>
                         Name:
                         <input
+                        id="textInput"
                         type="text"
                         name="username"
                         value={formData.username}
                         onChange={handleChange}
                         required
+                        minLength={3}
                         aria-label="Name"
                         />
                     </label>
-                    <label className="email-input">
+                    <label className="email-input" for="emailInput">
                         Email:
                         <input
+                        id="emailInput"
                         type="email"
                         name="email"
                         value={formData.email}
@@ -48,9 +53,10 @@ function BookingForm({ availableTimes, updateTimes, submitForm }) {
                         aria-label="Email"
                         />
                     </label>
-                    <label className="guest-input">
+                    <label className="guest-input" for="guestInput">
                         Guests:
                         <input
+                            id="guestInput"
                             type="number"
                             name="numberOfGuests"
                             min={1}
@@ -61,9 +67,10 @@ function BookingForm({ availableTimes, updateTimes, submitForm }) {
                             aria-label="Number of guests"
                         />
                     </label>
-                    <label className="occasion-input">
+                    <label className="occasion-input" for="occasionInput">
                         Special occasion:
                         <select
+                            id="occasionInput"
                             name="occasion"
                             value={formData.occasion}
                             onChange={handleChange}
@@ -75,9 +82,10 @@ function BookingForm({ availableTimes, updateTimes, submitForm }) {
                             <option value="Anniversary">Anniversary</option>
                         </select>
                     </label>
-                    <label className="date-input">
+                    <label className="date-input" for="dateInput">
                         Reservation date:
                         <input
+                        id="dateInput"
                         type="date"
                         name="date"
                         value={formData.date}
@@ -86,9 +94,10 @@ function BookingForm({ availableTimes, updateTimes, submitForm }) {
                         aria-label="Reservation date"
                         />
                     </label>
-                    <label className="time-input">
+                    <label className="time-input" for="timeInput">
                         Reservation time:
                         <select
+                            id="timeInput"
                             name="selectedTime"
                             required
                             onChange={(event) => setFormData({...formData, selectedTime:event.target.value})}
@@ -100,7 +109,7 @@ function BookingForm({ availableTimes, updateTimes, submitForm }) {
                             ))}
                         </select>
                     </label>
-                    <button className="submit-button" type="submit">Reserve</button>
+                    <button className="submit-button" type="submit" aria-label="On Click">Reserve</button>
                 </form>
             </div>
         </section>

@@ -66,6 +66,17 @@ button{
     grid-column: span 2 / span 2;
 }
 
+.home-btn {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.confirmation-text{
+    color: white;
+    text-align: center;
+    margin-top: 30px;
+}
 
 
 

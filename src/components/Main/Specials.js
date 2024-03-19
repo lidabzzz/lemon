@@ -1,6 +1,6 @@
 function Specials() {
     return(
-        <section className="specials-main">
+        <section className="specials-main" id="specials">
             <div className="specials-top">
                 <h3 className="specials">Specials</h3>
                 <button>Online Menu</button>
